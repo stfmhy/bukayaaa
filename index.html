@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Birthday Surprise 🎁</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HALAMAN PERTAMA -->
+    <div class="container" id="halamanAwal">
+      <div class="gift">🎁</div>
+
+      <h1>A Little Surprise For You 💗</h1>
+
+      <p>
+        Sebelum membuka hadiahnya...<br />
+        kasih tahu dulu namamu 👀
+      </p>
+
+      <input type="text" id="nama" placeholder="Masukkan namamu..." />
+
+      <button onclick="bukaHadiah()">Buka Hadiah 💌</button>
+    </div>
+
+    <!-- HALAMAN KEDUA -->
+    <div class="container hidden" id="halamanHadiah">
+      <div class="gift-big">🎁</div>
+
+      <h1>Hai, <span id="namaTampil"></span>! 💗</h1>
+
+      <p>Ada sesuatu yang sudah disiapkan khusus buat kamu...</p>
+
+      <button onclick="bukaKotak()">Buka Hadiahnya 🎀</button>
+    </div>
+
+    <!-- HALAMAN KETIGA -->
+    <div class="container hidden" id="halamanSurat">
+      <div class="surat">💌</div>
+
+      <h1>Untuk Kamu 💗</h1>
+
+      <p id="teksSurat"></p>
+
+      <button
+        id="tombolVideo"
+        onclick="lihatVideo()"
+        class="tombol-tersembunyi"
+      >
+        Ada hadiah terakhir 🎥
+      </button>
+    </div>
+
+<!-- HALAMAN KEEMPAT -->
+<div class="container hidden" id="halamanVideo">
+  <h1>
+    Happy Birthday LAGIIII,
+    <span id="namaVideo"></span>! 🎂
+  </h1>
+
+  <p>
+    DENGERIN YAAA 😭💗<br />
+    aduuuu malue bgt sebenernya wkwkw, tapi tidapapa akan ku berikan.<br /><br />
+
+    <b>JUST FOR U 💗</b><br /><br />
+
+    SILAHKAN DENGARKAN, tong seuri plis,<br />
+        karena ini sangat merdu, bengek dikit te ngaruh 😭🎉🎙️💗
+  </p>
+
+  <!-- RECORDING -->
+  <div class="audio-box">
+    <audio id="audioHadiah" controls>
+      <source src="RECORD/AGNI.mp3" type="audio/mpeg" />
+      Browser kamu tidak mendukung audio.
+    </audio>
+  </div>
+
+<!-- FOTO -->
+<div id="fotoHadiah" class="foto-tersembunyi">
+  <img src="GALERI/poto.jpg" alt="Foto kenangan" />
+</div>
+    
+    <p>
+      ✌️(❁´◡`❁)
+    </p>
+  </div>
+</div>
+    <!-- HALAMAN KELIMA -->
+    <div class="container hidden" id="halamanAkhir">
+      <div class="gift">🎁</div>
+
+      <h1>Surprise selesai! 🎁</h1>
+
+      <p>
+        Semoga agni senang dan tertawa selalu! 💗<br />
+        Kalo pun nangis, nangis nya karena bahagia, aamiin......🤲🤲<br />
+        Sekali lagi, <b>MABRUK ALFA MABRUK! 🎂✨</b><br /><br />
+
+        <b>from: Imeh cantik 💗</b>
+      </p>
+
+      <button onclick="mulaiLagi()">🤗 Peluk virtual 🤗</button>
+    </div>
+
+    <!-- MUSIK -->
+    <audio id="musik" loop>
+     <source src="musik/bekson.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

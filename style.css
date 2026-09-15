@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(135deg, #f8d7e8, #ead7e8, #f6e3d3);
+
+  color: #5a3044;
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gift {
+  font-size: 80px;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+p {
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+input {
+  width: 80%;
+
+  padding: 14px;
+
+  border: 2px solid #d9a6bd;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  margin-bottom: 15px;
+}
+
+button {
+  display: block;
+
+  margin: auto;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #a75d7c;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.gift-big {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.surat {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+#teksSurat {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.floating {
+  position: fixed;
+
+  bottom: -50px;
+
+  z-index: 999;
+
+  pointer-events: none;
+
+  animation: terbang linear forwards;
+}
+
+@keyframes terbang {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Animasi halaman surat */
+
+#halamanSurat {
+  animation: suratMuncul 1s ease;
+}
+
+@keyframes suratMuncul {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hiasan surat */
+
+.surat {
+  font-size: 80px;
+
+  animation: suratBerdenyut 1.5s infinite;
+}
+
+@keyframes suratBerdenyut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.tombol-tersembunyi {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#tombolVideo {
+  transition: opacity 1s ease;
+}
+
+#teksSurat {
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 17px;
+}
+.peluk-animasi {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  z-index: 9999;
+  animation: pelukNaik 4s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes pelukNaik {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  40% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  70% {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    bottom: 70%;
+    opacity: 0;
+    transform: translateX(-50%) scale(1.5);
+  }
+}
+.peluk-animasi {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  z-index: 9999;
+  animation: pelukNaik 4s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes pelukNaik {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  40% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  70% {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    bottom: 70%;
+    opacity: 0;
+    transform: translateX(-50%) scale(1.5);
+  }
+}
+.audio-box {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.audio-box audio {
+  width: 100%;
+}
+
+.foto-tersembunyi {
+  display: none;
+}
+
+#fotoHadiah {
+  margin-top: 25px;
+  animation: fotoMuncul 1s ease;
+}
+
+#fotoHadiah img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#fotoHadiah p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+@keyframes fotoMuncul {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
